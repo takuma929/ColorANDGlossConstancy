@@ -226,7 +226,7 @@ end
 %% Figure 14 - scatter plot human vs. groundturh for lighting environment
 img_lightprobe = zeros(128,256,3,12);
 for N = 1:12
-    img_lightprobe(:,:,:,N) = imresize(imread(['./data/imgs_lightprobe/LightProbe',num2str(N),'.png']),[128 256]);
+    img_lightprobe(:,:,:,N) = imresize(imread(fullfile(pwd,'data','imgs','lightprobe',['LightProbe',num2str(N),'.png'])),[128 256]);
 end
 
 corrCoeff_lightprobe = zeros(12,11);
@@ -359,7 +359,6 @@ sharpness = abs(corrCoeff_imgStats.sharpness(:,BestId.sharpness));
 
 corCoeff_p = pcorrCoeff_imgStats.Pellacini_c';
 
-%ub = mean(meancorrCoeff);
 contrast_pcorrCoeff = abs(pcorrCoeff_imgStats.contrast(:,BestId.contrast(1),BestId.contrast(2)));
 coverage_pcorrCoeff = abs(pcorrCoeff_imgStats.coverage(:,BestId.coverage));
 sharpness_pcorrCoeff = abs(pcorrCoeff_imgStats.sharpness(:,BestId.sharpness));
