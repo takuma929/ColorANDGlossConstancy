@@ -5,7 +5,7 @@ function CGC_figParameters(repo_basedir)
 
     fontsize = 7; % fontsize for general use
     fontsize_axis = 8; % fontsize for axis label
-    fontname = 'Arial'; % Use Arial for font
+    fontname = 'Helvetica'; % Use Arial for font
 
     % save figure parameter
     save(fullfile(repo_basedir,'data','CGC_FigParameters'),'twocolumn','onecolumn','fontsize','fontsize_axis',...
