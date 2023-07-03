@@ -20,7 +20,7 @@ There are 4 main codes to generate figures:
 "CGC_fig_Exp2.m" to generate figures in expeirment 2
 
 The "data" folder stores image data (imgs folder) and raw experimental data (rawdata folder).
-There are also imgStats_exp1.mat and imgStats_exp2.mat which store pre-computed image statiscs for images used in experiments 1 and 2.
+There are also imgStats_exp1.mat and imgStats_exp2.mat which store pre-computed image statistics for images used in experiments 1 and 2.
 
 **Raw data**
 
