@@ -578,7 +578,11 @@ clear p
 % (black body locus)
 ab_bbl = [7.87 35.23;4.45 25.80;2.32 17.78;1.02 10.96;0.28 5.14;...
         -0.11 0.15;-0.26 -4.17;-0.25 -7.92;-0.15 -11.20;0.02 -14.09;0.22 -16.64;0.45 -18.91;0.68 -20.94];
-    
+
+rgb_plot.envType1 = [0.42,0.44,0.43,0.22,0.45,0.56,0.49,0.54,0.49,0.57,0.49,0.32;0.24,0.40,0.58,0.33,0.36,0.52,0.67,0.41,0.64,0.47,0.61,0.39;0.27,0.29,0.56,0.40,0.48,0.45,0.55,0.51,0.65,0.62,0.60,0.24];
+rgb_plot.envType2 = [0.67,0.51,0.45,0.67,0.59,0.35,0.55,0.26,0.53,0.54,0.66,0.43;0.51,0.47,0.36,0.48,0.68,0.43,0.48,0.36,0.39,0.58,0.63,0.65;0.44,0.58,0.42,0.43,0.51,0.32,0.61,0.49,0.38,0.46,0.53,0.63];
+rgb_plot.envType3 = [0.62,0.25,0.23,0.37,0.59,0.59,0.62,0.59,0.60,0.22,0.74,0.65;0.50,0.53,0.49,0.43,0.63,0.60,0.46,0.54,0.41,0.40,0.62,0.55;0.48,0.55,0.45,0.32,0.73,0.74,0.50,0.47,0.49,0.44,0.63,0.69];
+
 for envType = 1:3
     fig = figure;
     
@@ -604,10 +608,11 @@ for envType = 1:3
     % plot 36 images - change the circle size according to the error
     for imageN = 1:length(chroma)
         rgb = lab2rgb(lightness(imageN),a(imageN),b(imageN));
+        rgb_record.(['envType',num2str(envType)])(:,imageN) = rgb;
         if error(imageN) > 0
-            scatter(a(imageN),b(imageN),abs(round(error(imageN)*5000)),rgb,'o','filled','MarkerEdgeColor','r','MarkerFaceAlpha',.5);hold on;
+            scatter(a(imageN),b(imageN),abs(round(error(imageN)*5000)),rgb_plot.(['envType',num2str(envType)])(:,imageN)','o','filled','MarkerEdgeColor','r','MarkerFaceAlpha',.5);hold on;
         else
-            scatter(a(imageN),b(imageN),abs(round(error(imageN)*5000)),rgb,'o','filled','MarkerEdgeColor','b','MarkerFaceAlpha',.5);hold on;
+            scatter(a(imageN),b(imageN),abs(round(error(imageN)*5000)),rgb_plot.(['envType',num2str(envType)])(:,imageN)','o','filled','MarkerEdgeColor','b','MarkerFaceAlpha',.5);hold on;
         end
     end
     
@@ -647,6 +652,15 @@ for envType = 1:3
     close all
 end
 
+for envType = 1:3
+    for imageN = 1:36
+        %lightness = groundTruth.lightness(env(envType).Id);
+        %gloss = groundTruth.Pellacini_c(env(envType).Id);
+    
+        %human_gloss = mean(humanResponse_allobservers.Pellacini_c(env(envType).Id,:),2);
+    end
+end
+
 %% Figure 9 -  interaction between diffuse reflectance and specular reflectance (lightness direction)
 for envType = 1:3
     fig = figure;
@@ -658,11 +672,10 @@ for envType = 1:3
     error = gloss' - human_gloss;
         
     for imageN = 1:length(chroma)
-        rgb = lab2rgb(lightness(imageN),a(imageN),b(imageN));
         if error(imageN) > 0
-            scatter(72-lightness(imageN)+27,0,abs(round(error(imageN)*5000)),rgb,'o','filled','MarkerEdgeColor','r','MarkerFaceAlpha',.5);hold on;
+            scatter(72-lightness(imageN)+27,0,abs(round(error(imageN)*5000)),rgb_plot.(['envType',num2str(envType)])(:,imageN)','o','filled','MarkerEdgeColor','r','MarkerFaceAlpha',.5);hold on;
         else
-            scatter(72-lightness(imageN)+27,0,abs(round(error(imageN)*5000)),rgb,'o','filled','MarkerEdgeColor','b','MarkerFaceAlpha',.5);hold on;
+            scatter(72-lightness(imageN)+27,0,abs(round(error(imageN)*5000)),rgb_plot.(['envType',num2str(envType)])(:,imageN)','o','filled','MarkerEdgeColor','b','MarkerFaceAlpha',.5);hold on;
         end
     end
     
