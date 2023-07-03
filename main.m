@@ -4,6 +4,10 @@ clearvars -except repo_basedir;close all;clc; % clear
 if ~exist(fullfile(repo_basedir,'figs'))
     mkdir(fullfile(repo_basedir,'figs'))
 end
+
+% adding path for the repository
+addpath(genpath(repo_basedir))
+
 CGC_figParameters(repo_basedir) % define parameters for figures
 disp('Parameter for figure generation was saved in the data folder..')
 CGC_fig_Exp1 % save figures for Exp1
