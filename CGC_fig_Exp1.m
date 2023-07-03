@@ -150,7 +150,6 @@ for type = {'diffuseANDspecular','diffuseOnly'}
     end
 end
 
-
 % sorting stats for the display purpose
 for var = {'lightness','chroma','Pellacini_c'}
     desiredOrder.(var{1}) = {'mean','percentile50','percentile25','percentile75','std','skewness','kurtosis','min','max'};
