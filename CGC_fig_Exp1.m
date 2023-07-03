@@ -285,7 +285,7 @@ for observer = length(observerList)+1
         fig.Color = 'w';
         fig.InvertHardcopy = 'off';
         fig.PaperPosition   = [0,10,8.45,8.45];
-        fig.Position = [10,10,twocolumn/8*0.5,twocolumn/4*0.95];
+        fig.Position = [10,10,twocolumn/8*0.6,twocolumn/4*0.95];
 
         ax.XLim = [0.5 1.5];
         ax.YLim = [minVal_control(cnt) maxVal_control(cnt)];
