@@ -1,4 +1,4 @@
-# ColorANDGlossConstancy
+# Repository for Color and GlossConstancy
 
 A repository to store raw experimental data, images, and MATLAB source codes to reproduce result figures in an associated publication.
 Takuma Morimoto, Arash Akbarinia, Katherine Storrs, Jacob R. Cheeseman, Hannah E. Smithson, Karl R. Gegenfurtner and Roland W. Fleming, “Color and gloss constancy under diverse lighting environments”. bioRxiv. https://doi.org/10.1101/2022.12.09.519756 (in press, Journal of Vision).
