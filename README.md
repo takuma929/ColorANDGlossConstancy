@@ -1,15 +1,19 @@
 # ColorANDGlossConstancy
+
 A repository to store raw experimental data, images, and MATLAB source codes to reproduce result figures in an associated publication.
 Takuma Morimoto, Arash Akbarinia, Katherine Storrs, Jacob R. Cheeseman, Hannah E. Smithson, Karl R. Gegenfurtner and Roland W. Fleming, “Color and gloss constancy under diverse lighting environments”. bioRxiv. https://doi.org/10.1101/2022.12.09.519756 (in press, Journal of Vision).
 
 **How to Use** 
+
 Change directory to the main repository first, and then run main.m which will generate all images to figs folder.
 
 **Files**
+
 The folder named data stores image data (imgs folder) and raw experimental data (rawdata folder).
 There are also imgStats_exp1.mat and imgStats_exp2.mat which store pre-computed image statiscs for images used in experiments 1 and 2.
 
 **Raw data**
+
 "exp 1" folder stores each individiaul data for Experiment 1.
 The filename format is "{subjectName}_session{session number}.mat".
 Each data stores 2 variables.
@@ -25,6 +29,7 @@ Each data stores 2 variables:
 (2) "groundtruth" stores associated ground-truth value for each image, and imageN indicates test images (1-36) and control images (control image 1 = -2, control image 2 = -1).
 
 **Image data**
+
 "exp1" stores 36 test images. Each mat file stores XYZ1931, srgb, and alpha images.
 "exp2" stores 216 test images. Each mat file stores XYZ1931, and srgb images.
 
