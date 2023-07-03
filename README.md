@@ -12,7 +12,9 @@ Takuma Morimoto, Arash Akbarinia, Katherine Storrs, Jacob R. Cheeseman, Hannah E
 
 Change directory to the main repository first, and then run "main.m" which will generate all images. All images will be save to figs folder.
 
-Make sure that "Psychtoolbox 3" is installed.
+Note that codes use several functions in "Psychtoolbox 3", so please make sure this is also installed.
+
+Other depedencies are given in "function" folder.
 
 **Files**
 
