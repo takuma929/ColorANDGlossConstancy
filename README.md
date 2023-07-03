@@ -1,4 +1,4 @@
-# Repository for color and gloss constancy project
+# Repository for Color and gloss constancy under diverse lighting environments
 
 A repository to store raw experimental data, images, and MATLAB source codes to reproduce result figures in an associated publication.
 
