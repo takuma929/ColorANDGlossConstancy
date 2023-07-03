@@ -329,7 +329,7 @@ L = zeros(138,332,3,12);
 
 for lightprobeN = 1:12
     I(:,:,:,lightprobeN) = imresize(double(imread(fullfile(pwd,'figs',['Fig14a_glossSet_lightprobe',num2str(lightprobeN),'.png'])))/255,[298 332]);
-    temp = double(imread(['./data/imgs_lightprobe/LightProbe',num2str(lightprobeN),'.png']))/255; % load image
+    temp = double(imread(fullfile(pwd,'data','imgs','lightprobe',['LightProbe',num2str(lightprobeN),'.png'])))/255; % load image
     L(:,:,:,lightprobeN) = [ones(size(temp,1),size(I,2)-size(temp,2),3),temp];
 end
 
