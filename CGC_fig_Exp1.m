@@ -607,8 +607,6 @@ for envType = 1:3
     
     % plot 36 images - change the circle size according to the error
     for imageN = 1:length(chroma)
-        rgb = lab2rgb(lightness(imageN),a(imageN),b(imageN));
-        rgb_record.(['envType',num2str(envType)])(:,imageN) = rgb;
         if error(imageN) > 0
             scatter(a(imageN),b(imageN),abs(round(error(imageN)*5000)),rgb_plot.(['envType',num2str(envType)])(:,imageN)','o','filled','MarkerEdgeColor','r','MarkerFaceAlpha',.5);hold on;
         else
@@ -650,15 +648,6 @@ for envType = 1:3
     % save image
     exportgraphics(fig,fullfile(repo_basedir,'figs',['Fig9_',envType_label{envType},'.pdf']),'ContentType','vector')
     close all
-end
-
-for envType = 1:3
-    for imageN = 1:36
-        %lightness = groundTruth.lightness(env(envType).Id);
-        %gloss = groundTruth.Pellacini_c(env(envType).Id);
-    
-        %human_gloss = mean(humanResponse_allobservers.Pellacini_c(env(envType).Id,:),2);
-    end
 end
 
 %% Figure 9 -  interaction between diffuse reflectance and specular reflectance (lightness direction)
@@ -704,7 +693,6 @@ for envType = 1:3
     ax.FontName = 'Arial';
     ax.Color = [.97 .97 .97];
     ax.FontSize = fontsize;
-    %ticklengthcm(ax,0.0)
 
     ax.XColor = 'k';ax.YColor = 'k';
     
