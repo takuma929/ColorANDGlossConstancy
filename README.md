@@ -38,6 +38,9 @@ Each data stores 2 variables:
 (1) "responses" stores human judgement data for Pellacini_c for 218 images (216 test images + 2 control condition). 
 (2) "groundtruth" stores associated ground-truth value for each image, and imageN indicates test images (1-36) and control images (control image 1 = -2, control image 2 = -1).
 
+Image numbers 1 - 216 corresponds to test images in the order of "img_lightprobe1_obj1.mat", "img_lightprobe1_obj2.mat", ..., "img_lightprobe12_obj1.mat",...,"img_lightprobe12_obj18.mat".
+
+
 **Image data**
 
 "exp1" stores 36 test images. Each mat file stores XYZ1931, srgb, and alpha images.
