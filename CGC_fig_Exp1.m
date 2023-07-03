@@ -4,7 +4,7 @@ clear;close all;clc; % cleaning up
 %%%%%% Script to reproduce all figures for Exp1 %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-load(fullfile(repo_basedir,'data','CGC_FigParameters')) % fig parameters load
+load(fullfile(pwd,'data','CGC_FigParameters')) % fig parameters load
 load(fullfile(repo_basedir,'data','imgStats_exp1')) % load pre-computed image-statistics for all images
 
 % specify which figures to Plot
