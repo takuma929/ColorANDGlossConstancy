@@ -4,8 +4,6 @@ clear;close all;clc; % cleaning up
 %%%%%% Script to reproduce all figures for Exp1 %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-repo_basedir = '/Users/takuma/Documents/GitHub/ColorANDGlossConstancy/';
-
 load(fullfile(repo_basedir,'data','CGC_FigParameters')) % fig parameters load
 load(fullfile(repo_basedir,'data','imgStats_exp1')) % load pre-computed image-statistics for all images
 
