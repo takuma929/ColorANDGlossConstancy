@@ -10,9 +10,13 @@ Change directory to the main repository first, and then run main.m which will ge
 **Files**
 
 There are 4 main codes to generate figures:
+
 "main.m" to run other three codes
+
 "CGC_figParameters.m" to define parameters for figure generation (e.g. fontsize, fontname)
+
 "CGC_fig_Exp1.m" to generate figures in expeirment 1
+
 "CGC_fig_Exp2.m" to generate figures in expeirment 2
 
 The "data" folder stores image data (imgs folder) and raw experimental data (rawdata folder).
