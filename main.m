@@ -1,6 +1,9 @@
 function main(repo_basedir)
 
-clearvars -except repo_basedir;close all;clc; % clear
+clearvars;close all;clc; % clear
+
+repo_basedir = pwd;
+
 if ~exist(fullfile(repo_basedir,'figs'))
     mkdir(fullfile(repo_basedir,'figs'))
 end
